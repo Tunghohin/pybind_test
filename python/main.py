@@ -1,4 +1,4 @@
-import example
+import pybind_test
 
 if __name__ == "__main__":
-    example.add(2, 3)
+    print(pybind_test.core.add(2, 3))
