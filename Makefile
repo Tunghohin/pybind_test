@@ -1,6 +1,10 @@
-.PHONY : install-python
-install-python:
-	pip uninstall pybind_test
+.PHONY : build install-python
+
+build:
+	/usr/bin/cmake --build /home/sgimage/Labs/pybind_test/build --config Debug --target all
+
+install-python: build
+	yes | pip uninstall pybind_test
 	mkdir -p pybind_test
 	cp ./pyproject.toml ./pybind_test
 	mkdir -p ./pybind_test/src

@@ -6,5 +6,10 @@ int add(int i, int j) { return i + j; }
 
 PYBIND11_MODULE(pybind_test_lib, m) {
     m.doc() = "It's testing.";
-    m.def("add", &add, "Simple add function.");
+    m.def(
+        "add", &add, 
+        "Simple add function.",
+        py::arg("i"), py::arg("j")
+    );
+    m.attr("magic") = 233;
 }
