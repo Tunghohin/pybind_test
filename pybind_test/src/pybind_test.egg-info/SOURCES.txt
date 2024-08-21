@@ -1,0 +1,6 @@
+pyproject.toml
+src/pybind_test/__init__.py
+src/pybind_test.egg-info/PKG-INFO
+src/pybind_test.egg-info/SOURCES.txt
+src/pybind_test.egg-info/dependency_links.txt
+src/pybind_test.egg-info/top_level.txt
